@@ -7,10 +7,6 @@ const int motor2Pin2 = 6;  // Motor 2 input pin 2
 // Define button pin
 const int buttonPin = 7;   // Start button pin
 
-// Define motor enable pins (if using L298N)
-const int enable1Pin = 9;
-const int enable2Pin = 10;
-
 void setup() {
   // Set motor pins as outputs
   pinMode(motor1Pin1, OUTPUT);
@@ -41,9 +37,6 @@ void loop() {
     digitalWrite(motor2Pin1, HIGH);
     digitalWrite(motor2Pin2, LOW);
 
-    // Enable motors (if using L298N)
-    analogWrite(enable1Pin, 255);
-    analogWrite(enable2Pin, 255);
   } else {
     // Stop the motors
     digitalWrite(motor1Pin1, LOW);
@@ -51,8 +44,5 @@ void loop() {
     digitalWrite(motor2Pin1, LOW);
     digitalWrite(motor2Pin2, LOW);
 
-    // Disable motors (if using L298N)
-    analogWrite(enable1Pin, 0);
-    analogWrite(enable2Pin, 0);
   }
 }
