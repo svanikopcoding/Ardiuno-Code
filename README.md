@@ -1,5 +1,5 @@
 
-# Drag Race Ardui
+# Drag Race Arduino
 
 ## Components Needed:
 -  Arduino Uno (or any compatible board)
